@@ -20,5 +20,6 @@ import robots.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('robot/create/', robots.views.create_robot, name='create-robot')
+    path('robot/create/', robots.views.create_robot, name='create-robot'),
+    path('stats/robots-production/', robots.views.week_production_volume_stats, name='robots-week-production')
 ]
