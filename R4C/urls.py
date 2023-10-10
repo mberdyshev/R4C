@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+import orders.views
 import robots.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('robot/create/', robots.views.create_robot, name='create-robot'),
+    path('order/test-create/', orders.views.test_create_customer_orders, name='test-create-order'),
     path('stats/robots-production/', robots.views.week_production_volume_stats, name='robots-week-production')
 ]
