@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+import robots.views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('robot/create/', robots.views.create_robot, name='create-robot')
 ]
